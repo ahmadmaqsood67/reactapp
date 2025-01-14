@@ -33,7 +33,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Step 5: Build and push Docker image
+      # Step 5: Build and push Docker image  testing
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
