@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "master" ] # Changed from "master" to "main" for the default branch.
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -33,7 +33,3 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/frontend_docker:latest
-
-    # Optional Step 5: Verify the image was pushed successfully
-    - name: Verify Docker image
-      run: echo "Docker image pushed successfully!"
