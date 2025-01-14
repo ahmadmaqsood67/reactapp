@@ -23,7 +23,8 @@ jobs:
 
       # Step 3: Debug step to verify secrets (Remove this in production)
       - name: Debug Secrets
-        run: echo "Docker Username: ${{ secrets.DOCKER_USERNAME }}"
+        run: |
+          echo "Docker Username: ${{ secrets.DOCKER_USERNAME }}"
 
       # Step 4: Log in to Docker Hub
       - name: Log in to Docker Hub
