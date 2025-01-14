@@ -3,8 +3,6 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ] # Changed from "master" to "main" for the default 
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
